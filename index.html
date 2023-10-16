@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a onclick="reload()" href="#">
+                <!-- give logo image here -->
+                YOUR-NEWS.com
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="Worldcup" onclick="onNavItemClick(' Icc cricket Worldcup')">World Cup</li>
+                    <li class="hover-link nav-item" id="Finance" onclick="onNavItemClick('Finance')">Finance</li>
+                    <li class="hover-link nav-item" id="Politics" onclick="onNavItemClick('Politics')">Politics</li>
+                </ul>
+            </div>
+            <div class="search-bar">
+                <input id="search-text" type="text" class="news-input" placeholder="eg. Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+    <div id="weather-card-container" class="weather-card-container">
+        <div class="weather-card" id="weather-card1">
+            <!-- Content for Weather Card 1 -->
+        </div>
+        <div class="weather-card" id="weather-card2">
+            <!-- Content for Weather Card 2 -->
+        </div>
+        <div class="weather-card" id="weather-card3">
+            <!-- Content for Weather Card 3 -->
+        </div>
+        <div class="weather-card" id="weather-card4">
+            <!-- Content for Weather Card 4 -->
+        </div>
+    </div>
+    <main>
+        <!-- <div id="weather-card-container">
+            <h3>this is a weather card</h3>
+        </div> -->
+        <div id="cards-container" class="cards-container container flex">
+           
+        </div>
+    </main>
+    <template id="tempalte-weather-card">
+        <div class="weather-card">
+            <div class="weather">
+                <img src="./assets/images/rain.png" alt="image for the weather" class="weather-icon">
+                <h3 class="temp">22°C</h3>
+                <h4 class="city-name">Delhi</h4>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="details">
+                <div class="col">
+                    <img class="img-icons" src="./assets/images/humidity.png" alt="humidity-icon">
+                    <p class="humidity heading-detail">50%</p>
+                    <p class="detail-desc">Humidity</p>
+                </div>
+                <div class="col">
+                    <img class="img-icons" src="./assets/images/wind.png" alt="humidity-icon">
+                    <p class="wind heading-detail">20 km/h</p>
+                    <p class="detail-desc">Wind speed</p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img id="news-img" src="https://via.placeholder.com/400x200" alt="images of news icons" width="360px" height="200px">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This Is Title</h3>
+                <h6 class="news-source" id="news-source">End gaget 14/09/2023</h6>
+                <p id="news-desc" class="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis sequi fuga voluptatum, quae consectetur voluptatem officia rerum. Neque, ratione distinctio! Natus nisi quisquam facere eum voluptatum illo ipsum veniam corrupti iure nulla reiciendis reprehenderit beatae impedit blanditiis neque ratione vitae nobis, similique unde quo doloremque.</p>
+            </div>
+        </div>
+    </template>
+    
+    <script src="script.js"></script>
+</body>
+</html>
